@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katarzyna Krupa-Pacharzyna | Profesjonalny Wizerunek Online</title>
+    <meta name="description" content="Profesjonalne wsparcie w budowaniu wizerunku online, pozycjonowaniu wizytówek Google i strategii social media dla branży beauty i medycznej.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#4D3F29',
+                            gold: '#C49A6C',
+                            cream: '#FFF3D1',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #4D3F29;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+        .bg-premium-gradient {
+            background: linear-gradient(135deg, #FFF3D1 0%, #FFFFFF 100%);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(77, 63, 41, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#hero" class="cursor-pointer">
+                <img src="public/images/5 – ze zmianami.png" alt="Logo Firmy" class="h-12 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#o-mnie" class="text-sm font-medium hover:text-brand-gold transition-colors uppercase tracking-widest">O mnie</a>
+                <a href="#uslugi" class="text-sm font-medium hover:text-brand-gold transition-colors uppercase tracking-widest">Usługi</a>
+                <a href="#oferta" class="text-sm font-medium hover:text-brand-gold transition-colors uppercase tracking-widest">Oferta</a>
+                <a href="#opinie" class="text-sm font-medium hover:text-brand-gold transition-colors uppercase tracking-widest">Opinie</a>
+                <a href="#kontakt" class="text-sm font-medium hover:text-brand-gold transition-colors uppercase tracking-widest">Kontakt</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-brand-dark" id="menu-toggle">
+                <i data-lucide="menu" size="28"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-gold/20 overflow-hidden absolute w-full shadow-xl">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#o-mnie" class="mobile-link text-lg font-medium hover:text-brand-gold transition-colors">O mnie</a>
+                <a href="#uslugi" class="mobile-link text-lg font-medium hover:text-brand-gold transition-colors">Usługi</a>
+                <a href="#oferta" class="mobile-link text-lg font-medium hover:text-brand-gold transition-colors">Oferta</a>
+                <a href="#opinie" class="mobile-link text-lg font-medium hover:text-brand-gold transition-colors">Opinie</a>
+                <a href="#kontakt" class="mobile-link text-lg font-medium hover:text-brand-gold transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-premium-gradient">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <span class="text-brand-gold font-semibold uppercase tracking-[0.2em] text-xs mb-6 block">Ekspertka Wizerunku Online</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] mb-8 text-brand-dark text-balance">
+                    Zadbam o spójny wizerunek Twojej marki online
+                </h1>
+                <p class="text-lg md:text-xl text-brand-dark/70 mb-10 leading-relaxed max-w-xl">
+                    Poprowadzę Twoje social media, zoptymalizuję wizytówkę Google i opracuję strategiczne treści eksperckie – dzięki czemu Twoja obecność w sieci zacznie przekładać się na realne wyniki sprzedażowe.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#kontakt" class="bg-brand-dark text-white px-10 py-5 rounded-full font-medium hover:bg-brand-gold transition-all duration-300 shadow-lg shadow-brand-dark/10 flex items-center justify-center group">
+                        Rozpocznij współpracę <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#uslugi" class="border border-brand-dark/20 text-brand-dark px-10 py-5 rounded-full font-medium hover:bg-brand-dark hover:text-white transition-all duration-300 text-center">
+                        Poznaj ofertę
+                    </a>
+                </div>
+            </div>
+            <div class="relative fade-in" style="animation-delay: 0.2s;">
+                <div class="aspect-[4/5] bg-brand-cream/30 rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+                    <img src="public/images/photo4.JPG" alt="Profesjonalna Ekspertka Marketingu" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-gold/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-brand-cream/40 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="o-mnie" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border border-brand-gold/10">
+                    <img src="public/images/photo1.JPG" alt="O mnie" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl border border-brand-gold/5 max-w-[240px]">
+                    <p class="text-brand-gold font-serif italic text-xl mb-2">"Pasja i strategia"</p>
+                    <p class="text-sm text-brand-dark/60 leading-relaxed">To fundamenty, na których buduję sukcesy moich klientów.</p>
+                </div>
+            </div>
+            <div>
+                <span class="text-brand-gold font-semibold uppercase tracking-[0.2em] text-xs mb-6 block">O mnie</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-10 text-brand-dark leading-tight">Buduję silną obecność marek w sieci od lat</h2>
+                <div class="space-y-8 text-brand-dark/70 leading-relaxed text-lg font-light">
+                    <p>
+                        Nazywam się <span class="text-brand-dark font-semibold">Katarzyna Krupa-Pacharzyna</span> i od ponad 7 lat wspieram firmy w budowaniu silnej, przemyślanej obecności online.
+                    </p>
+                    <p>
+                        Najczęściej pracuję dla marek z branży beauty i medycznej, ale z powodzeniem realizuję również projekty w innych sektorach.
+                    </p>
+                    <p>
+                        Pomagam tworzyć strategie komunikacji w social mediach, piszę treści, które przyciągają uwagę, budują zaufanie i wspierają sprzedaż. Specjalizuję się też w lokalnym pozycjonowaniu wizytówek Google – dzięki dobrze zaplanowanej strukturze i optymalizacji, moi klienci trafiają na top wyników wyszukiwania, bez potrzeby inwestowania w reklamy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="uslugi" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">Jak mogę pomóc Twojej firmie?</h2>
+                <p class="text-brand-dark/70 max-w-2xl mx-auto">Skupiam się na działaniach, które przynoszą realny zwrot z inwestycji i budują trwałą przewagę konkurencyjną.</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-10 rounded-3xl border border-brand-gold/5 flex flex-col items-start transition-all duration-300">
+                    <div class="mb-6 p-4 bg-brand-cream/30 rounded-2xl text-brand-gold">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brand-dark">1. Kompleksowa obsługa Social Mediów</h3>
+                    <p class="text-brand-dark/70 leading-relaxed">Stała, profesjonalna opieka nad Twoją obecnością w mediach społecznościowych – od strategii, przez tworzenie treści, aż po ich publikację i analizę efektów. Przygotowuję przemyślaną komunikację wizualną i tekstową, prowadzę profile w sposób spójny z wizerunkiem marki i dopasowany do jej celów biznesowych.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-10 rounded-3xl border border-brand-gold/5 flex flex-col items-start transition-all duration-300">
+                    <div class="mb-6 p-4 bg-brand-cream/30 rounded-2xl text-brand-gold">
+                        <i data-lucide="message-square"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brand-dark">2. Konsultacje indywidualne 1:1</h3>
+                    <p class="text-brand-dark/70 leading-relaxed">Jeśli coś nie działa tak, jak powinno – na konsultacji pomogę Ci to zrozumieć, nazwać i uporządkować. Analizuję aktualne działania, wychwytuję kluczowe błędy i daję klarowną listę kroków do wdrożenia od razu.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-10 rounded-3xl border border-brand-gold/5 flex flex-col items-start transition-all duration-300">
+                    <div class="mb-6 p-4 bg-brand-cream/30 rounded-2xl text-brand-gold">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brand-dark">3. Prowadzenie i optymalizacja wizytówek Google</h3>
+                    <p class="text-brand-dark/70 leading-relaxed">Chcesz lokalnie wypromować swój biznes — i to organicznie, bez wydawania ogromnych pieniędzy na reklamy? Zoptymalizuję i poprowadzę Twoją wizytówkę; na życzenie założę nową lub przeprowadzę audyt, aby konsekwentnie osiągała wysokie pozycje i wzmacniała przewagę nad konkurencją.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-32 bg-brand-dark text-brand-cream">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Jak wygląda proces współpracy?</h2>
+                <p class="text-brand-cream/70 max-w-2xl mx-auto">Przejrzyste kroki, które prowadzą nas do wspólnego sukcesu.</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-12 relative">
+                <div class="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-brand-gold/20 z-0"></div>
+                
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-2xl font-bold mb-8 shadow-lg">01</div>
+                    <h3 class="text-xl font-bold mb-4">Konsultacja</h3>
+                    <p class="text-brand-cream/60 text-sm leading-relaxed">Poznaję Twoje cele, branżę i aktualne wyzwania marketingowe.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-2xl font-bold mb-8 shadow-lg">02</div>
+                    <h3 class="text-xl font-bold mb-4">Strategia</h3>
+                    <p class="text-brand-cream/60 text-sm leading-relaxed">Opracowuję plan działania dopasowany do Twojego budżetu i potrzeb.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-2xl font-bold mb-8 shadow-lg">03</div>
+                    <h3 class="text-xl font-bold mb-4">Wdrożenie</h3>
+                    <p class="text-brand-cream/60 text-sm leading-relaxed">Realizuję założenia: optymalizuję wizytówkę, tworzę treści lub szkolę.</p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center text-2xl font-bold mb-8 shadow-lg">04</div>
+                    <h3 class="text-xl font-bold mb-4">Analiza</h3>
+                    <p class="text-brand-cream/60 text-sm leading-relaxed">Monitorujemy efekty i optymalizujemy działania dla najlepszych wyników.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="oferta" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">Wybierz pakiet dopasowany do Ciebie</h2>
+                <p class="text-brand-dark/70 max-w-2xl mx-auto">Konkretne rozwiązania w przejrzystych cenach. Bez ukrytych kosztów.</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-brand-gold/20 shadow-sm flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Audyt wizytówki Google – raport PDF</h3>
+                    <div class="text-3xl font-bold text-brand-gold mb-8">350 zł</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Analiza widoczności, spójności danych i struktury profilu</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Ocena treści, opinii, zdjęć, usług, kategorii</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Lista rekomendacji krok po kroku w pliku PDF</li>
+                    </ul>
+                    <a href="#kontakt" class="w-full py-4 rounded-full border border-brand-dark text-brand-dark font-semibold hover:bg-brand-dark hover:text-white transition-all text-center">Zamów audyt</a>
+                </div>
+
+                <!-- Card 2 - Featured -->
+                <div class="bg-brand-dark p-10 rounded-[2.5rem] border-2 border-brand-gold shadow-2xl flex flex-col relative transform md:-translate-y-4">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-gold text-brand-dark px-6 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Polecany</div>
+                    <h3 class="text-xl font-bold mb-2 text-brand-cream">Pakiet na start</h3>
+                    <div class="text-3xl font-bold text-brand-gold mb-8">1000 zł</div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Założenie lub aktualizacja wizytówki, dobór nazwy pod SEO</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Opis firmy SEO, uzupełnienie usług/produktów</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> 3 posty startowe (zoptymalizowane pod SEO)</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Dodanie zdjęć/ grafik/ dobór zdjęć stockowych</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Szablon do zbierania opinii</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-cream/80"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Instrukcje dalszego prowadzenia + 7 dni wsparcia</li>
+                    </ul>
+                    <a href="#kontakt" class="w-full py-4 rounded-full bg-brand-gold text-brand-dark font-bold hover:bg-brand-cream transition-all text-center">Wybieram ten pakiet</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-brand-gold/20 shadow-sm flex flex-col">
+                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Miesięczna obsługa wizytówki Google</h3>
+                    <div class="text-3xl font-bold text-brand-gold mb-8">600 zł <span class="text-sm font-normal text-brand-dark/50">/ mc</span></div>
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> 4 posty miesięcznie (zoptymalizowane pod SEO)</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Dobór zdjęć/ stock / przygotowanie grafik</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Bieżące uzupełnienie sekcji Produkty/Usługi</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Odpowiedzi na opinie (do 10 / mc)</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Wskazówki i porady dotyczące dalszych działań</li>
+                        <li class="flex items-start gap-3 text-sm text-brand-dark/70"><i data-lucide="check-circle-2" class="text-brand-gold shrink-0"></i> Monitoring profilu, drobne aktualizacje</li>
+                    </ul>
+                    <a href="#kontakt" class="w-full py-4 rounded-full border border-brand-dark text-brand-dark font-semibold hover:bg-brand-dark hover:text-white transition-all text-center">Zapytaj o obsługę</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="opinie" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">Zaufali mi liderzy branży</h2>
+                <p class="text-brand-dark/70 max-w-2xl mx-auto">Historie sukcesu firm, które zaufały mojej strategii i wiedzy.</p>
+                <div class="w-20 h-1 bg-brand-gold mx-auto mt-6"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl shadow-brand-dark/5 border border-brand-gold/5 italic text-brand-dark/80 flex flex-col relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold not-italic font-serif text-4xl">“</div>
+                    <p class="mb-8 flex-grow leading-relaxed text-lg">"Kasia, serio… ta wizytówka Google to był strzał w dziesiątkę. Po kilku tygodniach od założenia i przygotowania profilu, telefon po prostu zaczął dzwonić non stop. Klientki zapisują się same – jednego dnia trzy osoby tylko z wizytówki, do tego wiadomości na Instagramie, zapytania, smsy. Grafik mam tak pełny, że muszę odmawiać – nie mam już wolnych terminów do maja. I wszystko ruszyło dzięki temu, że dobrze ogarnęłaś mi wizytówkę Google. Ale co najważniejsze, to właśnie ten moment dał mi odwagę i stabilizację, żeby odejść z czyjegoś salonu i otworzyć swój własny. Bez tego by się nie udało. Dziękuję Ci za to z całego serca."</p>
+                    <div class="font-bold not-italic text-brand-dark border-t border-brand-gold/10 pt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-full"></div>
+                        <span>Artur Domżalski Hair</span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl shadow-brand-dark/5 border border-brand-gold/5 italic text-brand-dark/80 flex flex-col relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold not-italic font-serif text-4xl">“</div>
+                    <p class="mb-8 flex-grow leading-relaxed text-lg">"Kasiu, bardzo Ci dziękuję za pomoc z wizytówką! Minął dopiero coś około miesiąc od tych wszystkich zmian, a ja już widzę różnicę, bo mam duuużo więcej telefonów i zapisów z niej. Kilka osób powiedziało wprost, że znaleźli mnie przez Google! Mega się cieszę, że się do Ciebie odezwałam ❤"</p>
+                    <div class="font-bold not-italic text-brand-dark border-t border-brand-gold/10 pt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-full"></div>
+                        <span>Anna Studio Urody AnaBella</span>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl shadow-brand-dark/5 border border-brand-gold/5 italic text-brand-dark/80 flex flex-col relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-brand-gold/10 rounded-full flex items-center justify-center text-brand-gold not-italic font-serif text-4xl">“</div>
+                    <p class="mb-8 flex-grow leading-relaxed text-lg">"Bardzo polecam współpracę z Kasią – pomogła nam nie tylko w działaniach marketingowych, ale przede wszystkim przeszkoliła nas z tworzenia Reels i prowadzenia social mediów. Masa wiedzy, praktyczne wskazówki, przykłady, które mogliśmy wdrożyć. Przede wszystkim konkrety: w nagrywaniu, montażu, tekstach. Już pierwsze rolki zrobione po szkoleniu miały świetne zasięgi – jedna z nich nawet wykręciła nam viral. Widać, że Kasia zna się na tym, co robi. Wszystko tłumaczy jasno, przystępnie. Jesteśmy bardzo zadowoleni i wiemy, że na pewno znowu się do niej odezwiemy."</p>
+                    <div class="font-bold not-italic text-brand-dark border-t border-brand-gold/10 pt-6 flex items-center gap-4">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-full"></div>
+                        <span>Kasia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-32 bg-premium-gradient">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div>
+                    <span class="text-brand-gold font-semibold uppercase tracking-[0.2em] text-xs mb-6 block">Kontakt</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-brand-dark">Porozmawiajmy o Twoim biznesie</h2>
+                    <p class="text-lg text-brand-dark/70 mb-12 leading-relaxed">
+                        Wypełnij formularz lub skontaktuj się bezpośrednio. Odpowiem w ciągu 24 godzin i wspólnie ustalimy, jak możemy wzmocnić Twoją markę online.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-dark/40 uppercase font-bold tracking-widest mb-1">E-mail</div>
+                                <a href="mailto:kontakt@twojadomena.pl" class="text-xl font-medium hover:text-brand-gold transition-colors">kontakt.kkrupa@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-14 h-14 rounded-2xl bg-white shadow-lg flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-300">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-brand-dark/40 uppercase font-bold tracking-widest mb-1">Telefon</div>
+                                <a href="tel:+48000000000" class="text-xl font-medium hover:text-brand-gold transition-colors">+48 690 176 476</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16">
+                        <div class="text-xs text-brand-dark/40 uppercase font-bold tracking-widest mb-6">Social Media</div>
+                        <div class="flex gap-4">
+                            <a href="https://www.instagram.com/kasia.krupa_" class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center hover:bg-brand-gold transition-all duration-300 shadow-lg"><i data-lucide="instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/katarzyna-krupa-pacharzyna-5627571b4/" class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center hover:bg-brand-gold transition-all duration-300 shadow-lg"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-brand-gold/5">
+                    <form id="contact-form" class="space-y-8">
+                        <div>
+                            <label for="name" class="block text-xs font-bold text-brand-dark/40 mb-3 uppercase tracking-[0.2em]">Imię i Nazwisko</label>
+                            <input type="text" id="name" name="name" required placeholder="Twoje imię" class="w-full px-6 py-5 rounded-2xl bg-brand-cream/10 border border-brand-gold/10 focus:outline-none focus:ring-2 focus:ring-brand-gold/20 focus:bg-white transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-bold text-brand-dark/40 mb-3 uppercase tracking-[0.2em]">Adres E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="Twoja skrzynka pocztowa" class="w-full px-6 py-5 rounded-2xl bg-brand-cream/10 border border-brand-gold/10 focus:outline-none focus:ring-2 focus:ring-brand-gold/20 focus:bg-white transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-brand-dark/40 mb-3 uppercase tracking-[0.2em]">Wiadomość</label>
+                            <textarea id="message" name="message" required rows="4" placeholder="W czym mogę Ci pomóc?" class="w-full px-6 py-5 rounded-2xl bg-brand-cream/10 border border-brand-gold/10 focus:outline-none focus:ring-2 focus:ring-brand-gold/20 focus:bg-white transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-dark text-white py-6 rounded-2xl font-bold text-lg hover:bg-brand-gold transition-all duration-300 shadow-xl shadow-brand-dark/10">
+                            Wyślij wiadomość
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-brand-dark text-brand-cream border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <img src="public/images/5 – ze zmianami.png" alt="Logo Firmy" class="h-12 w-auto opacity-80">
+            <div class="text-sm text-brand-cream/50">
+                © 2026 Zlotymarketing.pl.Wszelkie prawa zastrzeżone.
+            </div>
+            <div class="flex gap-6">
+                <button id="privacy-btn" class="text-sm text-brand-cream/50 hover:text-brand-gold transition-colors">
+                    Polityka Prywatności
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="fixed inset-0 z-[100] bg-white overflow-y-auto p-6 md:p-12 hidden">
+        <div class="max-w-4xl mx-auto">
+            <button id="close-privacy" class="mb-8 flex items-center text-brand-gold font-semibold hover:underline">
+                <i data-lucide="arrow-left" class="mr-2"></i> Powrót do strony
+            </button>
+            <h1 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">
+                Polityka prywatności
+            </h1>
+            <p class="mb-8">
+                Polityka prywatności opisuje zasady przetwarzania przez nas informacji na Twój temat, w tym danych osobowych oraz ciasteczek, czyli tzw. cookies.
+            </p>
+
+            <div class="mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    1. Informacje ogólne
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem url: <span class="placeholder">zlotymarketing.pl</span>
+                    </li>
+                    <li>
+                        Operatorem serwisu oraz Administratorem danych osobowych jest: <span class="placeholder">Katarzyna Krupa-Pacharzyna ul. Gałczyńskiego 20, 47-400 Racibórz</span>
+                    </li>
+                    <li>
+                        Adres kontaktowy poczty elektronicznej operatora: <span class="placeholder">kontakt.kkrupa@gmail.com</span>
+                    </li>
+                    <li>
+                        Operator jest Administratorem Twoich danych osobowych w odniesieniu do danych podanych dobrowolnie w Serwisie.
+                    </li>
+                    <li>
+                        Serwis wykorzystuje dane osobowe w następujących celach:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Prowadzenie newslettera</li>
+                            <li>Prowadzenie systemu komentarzy</li>
+                            <li>Prowadzenie rozmów typu chat online</li>
+                            <li>Prezentacja profilu użytkownika innym użytkownikom</li>
+                            <li>Obsługa zapytań przez formularz</li>
+                            <li>Realizacja zamówionych usług</li>
+                            <li>Prezentacja oferty lub informacji</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora.</li>
+                            <li>Poprzez zapisywanie w urządzeniach końcowych plików cookie (tzw. „ciasteczka”).</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    2. Wybrane metody ochrony danych stosowane przez Operatora
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.</li>
+                    <li>W serwisie jest stosowana autentykacja dwuskładnikowa, co stanowi dodatkową formę ochrony logowania do Serwisu.</li>
+                    <li>Operator okresowo zmienia swoje hasła administracyjne.</li>
+                    <li>W celu ochrony danych Operator regularnie wykonuje kopie bezpieczeństwa.</li>
+                    <li>Istotnym elementem ochrony danych jest regularna aktualizacja wszelkiego oprogramowania, wykorzystywanego przez Operatora do przetwarzania danych osobowych, co w szczególności oznacza regularne aktualizacje komponentów programistycznych.</li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    3. Hosting
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: <span class="highlight">lh.pl</span>
+                    </li>
+                    <li>
+                        Firma hostingowa w celu zapewnienia niezawodności technicznej prowadzi logi na poziomie serwera. Zapisowi mogą podlegać:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>zasoby określone identyfikatorem URL (adresy żądanych zasobów – stron, plików),</li>
+                            <li>czas nadejścia zapytania,</li>
+                            <li>czas wysłania odpowiedzi,</li>
+                            <li>nazwę stacji klienta – identyfikacja realizowana przez protokół HTTP,</li>
+                            <li>informacje o błędach jakie nastąpiły przy realizacji transakcji HTTP,</li>
+                            <li>adres URL strony poprzednio odwiedzanej przez użytkownika (referer link) – w przypadku gdy przejście do Serwisu nastąpiło przez odnośnik,</li>
+                            <li>informacje o przeglądarce użytkownika,</li>
+                            <li>informacje o adresie IP,</li>
+                            <li>informacje diagnostyczne związane z procesem samodzielnego zamawiania usług poprzez rejestratory na stronie,</li>
+                            <li>informacje związane z obsługą poczty elektronicznej kierowanej do Operatora oraz wysyłanej przez Operatora.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    4. Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        W niektórych sytuacjach Administrator ma prawo przekazywać Twoje dane osobowe innym odbiorcom, jeśli będzie to niezbędne do wykonania zawartej z Tobą umowy lub do zrealizowania obowiązków ciążących na Administratorze. Dotyczy to takich grup odbiorców:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>firma hostingowa na zasadzie powierzenia</li>
+                            <li>organy publiczne</li>
+                            <li>operatorzy rozwiązania typu chat online</li>
+                            <li>upoważnieni pracownicy i współpracownicy, którzy korzystają z danych w celu realizacji celu działania strony</li>
+                            <li>firmy, świadczące usługi marketingu na rzecz Administratora</li>
+                        </ul>
+                    </li>
+                    <li>Twoje dane osobowe przetwarzane przez Administratora nie dłużej, niż jest to konieczne do wykonania związanych z nimi czynności określonych osobnymi przepisami (np. o prowadzeniu rachunkowości). W odniesieniu do danych marketingowych dane nie będą przetwarzane dłużej niż przez 3 lata.</li>
+                    <li>
+                        Przysługuje Ci prawo żądania od Administratora:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>dostępu do danych osobowych Ciebie dotyczących,</li>
+                            <li>ich sprostowania,</li>
+                            <li>usunięcia,</li>
+                            <li>ograniczenia przetwarzania,</li>
+                            <li>oraz przenoszenia danych.</li>
+                        </ul>
+                    </li>
+                    <li>Przysługuje Ci prawo do złożenia sprzeciwu w zakresie przetwarzania wskazanego w pkt 3.2 wobec przetwarzania danych osobowych w celu wykonania prawnie uzasadnionych interesów realizowanych przez Administratora, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń.</li>
+                    <li>Na działania Administratora przysługuje skarga do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.</li>
+                    <li>Podanie danych osobowych jest dobrowolne, lecz niezbędne do obsługi Serwisu.</li>
+                    <li>W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług w ramach zawartej umowy oraz w celu prowadzenia przez Administratora marketingu bezpośredniego.</li>
+                    <li>Dane osobowe nie są przekazywane od krajów trzecich w rozumieniu przepisów o ochronie danych osobowych. Oznacza to, że nie przesyłamy ich poza teren Unii Europejskiej.</li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    5. Informacje w formularzach
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Serwis zbiera informacje podane dobrowolnie przez użytkownika, w tym dane osobowe, o ile zostaną one podane.</li>
+                    <li>Serwis może zapisać informacje o parametrach połączenia (oznaczenie czasu, adres IP).</li>
+                    <li>Serwis, w niektórych wypadkach, może zapisać informację ułatwiającą powiązanie danych w formularzu z adresem e-mail użytkownika wypełniającego formularz. W takim wypadku adres e-mail użytkownika pojawia się wewnątrz adresu url strony zawierającej formularz.</li>
+                    <li>Dane podane w formularzu są przetwarzane w celu wynikającym z funkcji konkretnego formularza, np. w celu dokonania procesu obsługi zgłoszenia serwisowego lub kontaktu handlowego, rejestracji usług itp. Każdorazowo kontekst i opis formularza w czytelny sposób informuje, do czego on służy.</li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    6. Logi Administratora
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Informacje zachowaniu użytkowników w serwisie mogą podlegać logowaniu. Dane te są wykorzystywane w celu administrowania serwisem.</li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    7. Istotne techniki marketingowe
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        Operator stosuje analizę statystyczną ruchu na stronie, poprzez Google Analytics (Google Inc. z siedzibą w USA). Operator nie przekazuje do operatora tej usługi danych osobowych, a jedynie zanonimizowane informacje. Usługa bazuje na wykorzystaniu ciasteczek w urządzeniu końcowym użytkownika. W zakresie informacji o preferencjach użytkownika gromadzonych przez sieć reklamową Google użytkownik może przeglądać i edytować informacje wynikające z plików cookies przy pomocy narzędzia: 
+                        <a href="https://www.google.com/ads/preferences/" target="_blank" class="text-brand-gold underline">https://www.google.com/ads/preferences/</a>
+                    </li>
+                    <li>
+                        Operator stosuje techniki remarketingowe, pozwalające na dopasowanie przekazów reklamowych do zachowania użytkownika na stronie, co może dawać złudzenie, że dane osobowe użytkownika są wykorzystywane do jego śledzenia, jednak w praktyce nie dochodzi do przekazania żadnych danych osobowych od Operatora do operatorom reklam. Technologicznym warunkiem takich działań jest włączona obsługa plików cookie.
+                    </li>
+                    <li>
+                        Operator korzysta z piksela Facebooka. Ta technologia powoduje, że serwis Facebook (Facebook Inc. z siedzibą w USA) wie, że dana osoba w nim zarejestrowana korzysta z Serwisu. Bazuje w tym wypadku na danych, wobec których sam jest administratorem, Operator nie przekazuje od siebie żadnych dodatkowych danych osobowych serwisowi Facebook. Usługa bazuje na wykorzystaniu ciasteczek w urządzeniu końcowym użytkownika.
+                    </li>
+                    <li>
+                        Operator stosuje rozwiązanie badające zachowanie użytkowników poprzez tworzenie map ciepła oraz nagrywanie zachowania na stronie. Te informacje są anonimizowane zanim zostaną przesłane do operatora usługi tak, że nie wie on jakiej osoby fizycznej one dotyczą. W szczególności nagrywaniu nie podlegają wpisywane hasła oraz inne dane osobowe.
+                    </li>
+                    <li>
+                        Operator stosuje rozwiązanie automatyzujące działanie Serwisu w odniesieniu do użytkowników, np. mogące przesłać maila do użytkownika po odwiedzeniu konkretnej podstrony, o ile wyraził on zgodę na otrzymywanie korespondencji handlowej od Operatora.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    8. Informacja o plikach cookies
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Serwis korzysta z plików cookies.</li>
+                    <li>Pliki cookies (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności pliki tekstowe, które przechowywane są w urządzeniu końcowym Użytkownika Serwisu i przeznaczone są do korzystania ze stron internetowych Serwisu. Cookies zazwyczaj zawierają nazwę strony internetowej, z której pochodzą, czas przechowywania ich na urządzeniu końcowym oraz unikalny numer.</li>
+                    <li>Podmiotem zamieszczającym na urządzeniu końcowym Użytkownika Serwisu pliki cookies oraz uzyskującym do nich dostęp jest operator Serwisu.</li>
+                    <li>
+                        Pliki cookies wykorzystywane są w następujących celach:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>utrzymanie sesji użytkownika Serwisu (po zalogowaniu), dzięki której użytkownik nie musi na każdej podstronie Serwisu ponownie wpisywać loginu i hasła;</li>
+                            <li>realizacji celów określonych powyżej w części "Istotne techniki marketingowe";</li>
+                        </ul>
+                    </li>
+                    <li>W ramach Serwisu stosowane są dwa zasadnicze rodzaje plików cookies: „sesyjne” (session cookies) oraz „stałe” (persistent cookies). Cookies „sesyjne” są plikami tymczasowymi, które przechowywane są w urządzeniu końcowym Użytkownika do czasu wylogowania, opuszczenia strony internetowej lub wyłączenia oprogramowania (przeglądarki internetowej). „Stałe” pliki cookies przechowywane są w urządzeniu końcowym Użytkownika przez czas określony w parametrach plików cookies lub do czasu ich usunięcia przez Użytkownika.</li>
+                    <li>Oprogramowanie do przeglądania stron internetowych (przeglądarka internetowa) zazwyczaj domyślnie dopuszcza przechowywanie plików cookies w urządzeniu końcowym Użytkownika. Użytkownicy Serwisu mogą dokonać zmiany ustawień w tym zakresie. Przeglądarka internetowa umożliwia usunięcie plików cookies. Możliwe jest także automatyczne blokowanie plików cookies Szczegółowe informacje na ten temat zawiera pomoc lub dokumentacja przeglądarki internetowej.</li>
+                    <li>Ograniczenia stosowania plików cookies mogą wpłynąć na niektóre funkcjonalności dostępne na stronach internetowych Serwisu.</li>
+                    <li>Pliki cookies zamieszczane w urządzeniu końcowym Użytkownika Serwisu wykorzystywane mogą być również przez współpracujące z operatorem Serwisu podmioty, w szczególności dotyczy to firm: Google (Google Inc. z siedzibą w USA), Facebook (Facebook Inc. z siedzibą w USA), Twitter (Twitter Inc. z siedzibą w USA).</li>
+                </ul>
+            </div>
+
+            <div class="section mb-8">
+                <h2 class="text-xl md:text-2xl font-bold text-brand-dark mb-4">
+                    9. Zarządzanie plikami cookies – jak w praktyce wyrażać i cofać zgodę?
+                </h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        Jeśli użytkownik nie chce otrzymywać plików cookies, może zmienić ustawienia przeglądarki. Zastrzegamy, że wyłączenie obsługi plików cookies niezbędnych dla procesów uwierzytelniania, bezpieczeństwa, utrzymania preferencji użytkownika może utrudnić, a w skrajnych przypadkach może uniemożliwić korzystanie ze stron www
+                    </li>
+                    <li>
+                        W celu zarządzania ustawienia cookies wybierz z listy poniżej przeglądarkę internetową, której używasz i postępuj zgodnie z instrukcjami:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Edge</li>
+                            <li>Internet Explorer</li>
+                            <li>Chrome</li>
+                            <li>Safari</li>
+                            <li>Firefox</li>
+                            <li>Opera</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Urządzenia mobilne:
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Android</li>
+                            <li>Safari (iOS)</li>
+                            <li>Windows Phone</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            window.location.href = `mailto:kontakt@twojadomena.pl?subject=Kontakt od ${name}&body=Od: ${email}%0D%0A%0D%0A${message}`;
+        });
+
+        // Privacy Modal Handler
+        const privacyBtn = document.getElementById('privacy-btn');
+        const closePrivacy = document.getElementById('close-privacy');
+        const privacyModal = document.getElementById('privacy-modal');
+
+        privacyBtn.addEventListener('click', () => {
+            privacyModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closePrivacy.addEventListener('click', () => {
+            privacyModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+</html>
